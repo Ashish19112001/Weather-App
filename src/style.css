@@ -575,3 +575,164 @@ footer {
     font-size: 86px;
   }
 }
+
+
+/* Compact single-screen fix */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.App, .app, .main, .weather-app, .container {
+  min-height: 100vh;
+}
+
+.weather-card,
+.main-card,
+.card,
+.weather-container,
+.weather-box {
+  max-height: none;
+}
+
+.weather-wrapper,
+.wrapper {
+  min-height: 100vh;
+}
+
+/* Reduce oversized spacing and keep the dashboard visible on one screen */
+.weather-card,
+.main-card,
+.weather-container,
+.weather-box,
+.card {
+  margin-top: 18px !important;
+  margin-bottom: 18px !important;
+}
+
+.hero,
+.top-section,
+.weather-hero {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.weather-icon,
+.hero-icon,
+.cloud-img,
+.cloud-image {
+  max-width: 120px !important;
+  max-height: 120px !important;
+}
+
+.info-cards,
+.details,
+.weather-details,
+.stats,
+.bottom-section {
+  gap: 14px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.footer,
+.credit,
+.copyright {
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+}
+
+/* Never show duplicate footer placed inside the weather card */
+.weather-card .footer,
+.weather-card .credit,
+.weather-card .copyright,
+.main-card .footer,
+.main-card .credit,
+.main-card .copyright,
+.weather-container .footer,
+.weather-container .credit,
+.weather-container .copyright {
+  display: none !important;
+}
+
+/* Keep only page-level footer visible */
+body > .footer,
+.App > .footer,
+.app > .footer,
+#root > .footer {
+  display: block !important;
+}
+
+@media (min-width: 900px) {
+  .weather-card,
+  .main-card,
+  .weather-container,
+  .weather-box,
+  .card {
+    width: min(1120px, 92vw) !important;
+  }
+
+  .hero,
+  .top-section,
+  .weather-hero {
+    min-height: 190px !important;
+  }
+
+  .temperature,
+  .temp {
+    font-size: clamp(52px, 7vw, 92px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-card,
+  .main-card,
+  .weather-container,
+  .weather-box,
+  .card {
+    width: 94vw !important;
+    margin: 12px auto !important;
+    border-radius: 24px !important;
+  }
+
+  .hero,
+  .top-section,
+  .weather-hero {
+    padding: 18px 14px !important;
+  }
+
+  .weather-icon,
+  .hero-icon,
+  .cloud-img,
+  .cloud-image {
+    max-width: 90px !important;
+    max-height: 90px !important;
+  }
+
+  .info-cards,
+  .details,
+  .weather-details,
+  .stats,
+  .bottom-section {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 900px) {
+  .weather-card,
+  .main-card,
+  .weather-container,
+  .weather-box,
+  .card {
+    transform: scale(0.88);
+    transform-origin: top center;
+    margin-bottom: -70px !important;
+  }
+}
