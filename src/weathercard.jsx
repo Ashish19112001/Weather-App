@@ -162,8 +162,6 @@ const Weathercard = ({
           <span>Wind Speed</span>
         </div>
       </div>
-
-      <footer>copyright© | Design and Code by Ashish Gangwar ❤️</footer>
     </article>
   );
 };

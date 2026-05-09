@@ -75,12 +75,9 @@ const Temp = () => {
       <div className="cloud cloud-two"></div>
       <div className="cloud cloud-three"></div>
 
-      <section className="hero-copy">
+      <section className="hero-copy compact-hero">
         <p className="eyebrow">Live Weather Forecast</p>
-        <h1>Weather that feels modern, clean & alive.</h1>
-        <p className="hero-subtitle">
-          Search any city and get local time, sunrise, sunset, humidity, wind and pressure in a premium dashboard.
-        </p>
+        <h1>Modern Weather Dashboard</h1>
       </section>
 
       <form className="search" onSubmit={handleSubmit}>
@@ -102,6 +99,7 @@ const Temp = () => {
       {error && <p className="error-message">{error}</p>}
 
       <Weathercard {...tempInfo} isLoading={isLoading} />
+      <footer className="page-footer">copyright© | Design and Code by Ashish Gangwar ❤️</footer>
     </main>
   );
 };

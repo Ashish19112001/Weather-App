@@ -736,3 +736,427 @@ body > .footer,
     margin-bottom: -70px !important;
   }
 }
+
+/* FINAL FIX */
+html,body,#root{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+body{
+  background: linear-gradient(180deg,#08111f,#0d1b2a,#132238);
+  min-height:100vh;
+}
+
+.weather-card,.main-card,.weather-box,.container{
+  max-width:1050px !important;
+  margin:18px auto !important;
+  border-radius:28px !important;
+  backdrop-filter: blur(18px);
+  box-shadow:0 0 35px rgba(0,255,255,.18);
+}
+
+.weather-card .footer,
+.weather-card footer,
+.main-card .footer,
+.main-card footer{
+  display:none !important;
+}
+
+footer{
+  margin-top:10px !important;
+  padding:8px !important;
+}
+
+.temp,.temperature{
+  font-size:72px !important;
+  line-height:1 !important;
+}
+
+.weather-icon,img{
+  animation: floatCloud 4s ease-in-out infinite;
+}
+
+@keyframes floatCloud{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0px);}
+}
+
+@media(max-width:768px){
+  .temp,.temperature{
+    font-size:52px !important;
+  }
+
+  .weather-card,.main-card,.weather-box,.container{
+    width:94vw !important;
+    padding:14px !important;
+  }
+}
+
+
+/* === ONE PAGE + GLOW FINAL OVERRIDE === */
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(88, 255, 230, 0.32), transparent 28%),
+    radial-gradient(circle at 85% 78%, rgba(68, 143, 255, 0.28), transparent 30%),
+    linear-gradient(135deg, #05101f, #071a31 58%, #020814) !important;
+}
+
+.app-shell {
+  width: min(1180px, 96vw) !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  padding: 12px 0 8px !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  overflow: hidden !important;
+}
+
+.hero-copy {
+  margin-bottom: 4px !important;
+}
+
+.compact-hero h1,
+.hero-copy h1 {
+  font-size: clamp(28px, 4vh, 44px) !important;
+  line-height: 1 !important;
+  text-shadow:
+    0 0 16px rgba(85, 230, 209, 0.65),
+    0 0 42px rgba(44, 137, 255, 0.45) !important;
+}
+
+.hero-subtitle {
+  display: none !important;
+}
+
+.eyebrow {
+  margin-bottom: 6px !important;
+  padding: 5px 12px !important;
+  font-size: 11px !important;
+  box-shadow: 0 0 18px rgba(85, 230, 209, 0.32);
+}
+
+.search {
+  width: min(560px, 92vw) !important;
+  margin-bottom: 8px !important;
+  padding: 5px !important;
+  box-shadow:
+    0 0 22px rgba(85, 230, 209, 0.26),
+    inset 0 1px 0 rgba(255,255,255,0.22) !important;
+}
+
+.searchTerm,
+.searchButton {
+  height: 38px !important;
+  font-size: 14px !important;
+}
+
+.searchButton {
+  min-width: 96px !important;
+  box-shadow:
+    0 0 20px rgba(57, 223, 206, 0.50),
+    0 0 44px rgba(44, 137, 255, 0.28) !important;
+}
+
+.widget {
+  width: min(920px, 94vw) !important;
+  max-height: calc(100vh - 145px) !important;
+  grid-template-columns: 1.25fr 0.75fr !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 0 0 1px rgba(120, 255, 235, 0.26),
+    0 0 34px rgba(85, 230, 209, 0.35),
+    0 0 80px rgba(44, 137, 255, 0.18),
+    0 24px 70px rgba(0,0,0,0.48) !important;
+}
+
+.widget::before {
+  background: linear-gradient(120deg, transparent, rgba(85, 230, 209, 0.50), transparent 58%) !important;
+}
+
+.weatherIcon {
+  min-height: 150px !important;
+  max-height: 150px !important;
+}
+
+.weatherIcon i {
+  font-size: 48px !important;
+  text-shadow:
+    0 0 18px rgba(255,255,255,0.9),
+    0 0 38px rgba(85, 230, 209, 0.9) !important;
+}
+
+.weatherIcon h2 {
+  margin-top: 8px !important;
+  font-size: clamp(28px, 4vh, 42px) !important;
+}
+
+.weatherIcon p {
+  font-size: 13px !important;
+}
+
+.sun-orb {
+  width: 90px !important;
+  height: 90px !important;
+  top: 18px !important;
+  right: 24% !important;
+  box-shadow: 0 0 35px rgba(255, 196, 71, 0.85) !important;
+}
+
+.floating-cloud {
+  width: 95px !important;
+  height: 34px !important;
+}
+
+.cloud-card-one {
+  left: 18% !important;
+  top: 55px !important;
+}
+
+.cloud-card-two {
+  right: 11% !important;
+  bottom: 28px !important;
+}
+
+.weatherInfo {
+  min-height: 155px !important;
+  padding: 24px 30px !important;
+  gap: 24px !important;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(85, 230, 209, 0.14), transparent 36%),
+    rgba(4, 12, 24, 0.90) !important;
+}
+
+.temperature span {
+  font-size: clamp(54px, 8vh, 86px) !important;
+  text-shadow:
+    0 0 18px rgba(255,255,255,0.28),
+    0 0 38px rgba(85,230,209,0.34) !important;
+}
+
+.temperature small {
+  margin-top: 6px !important;
+  font-size: 13px !important;
+}
+
+.weatherCondition {
+  font-size: clamp(24px, 4vh, 36px) !important;
+}
+
+.place {
+  margin-top: 5px !important;
+  font-size: 15px !important;
+}
+
+.date {
+  min-height: 155px !important;
+  padding: 22px 26px !important;
+  box-shadow: inset 0 0 40px rgba(255,255,255,0.16);
+}
+
+.date strong {
+  font-size: clamp(28px, 4.6vh, 42px) !important;
+  margin: 7px 0 !important;
+}
+
+.date small {
+  font-size: 13px !important;
+}
+
+.extra-temp {
+  padding: 18px 22px !important;
+  gap: 14px !important;
+  background: rgba(255,255,255,0.94) !important;
+}
+
+.info-card {
+  min-height: 100px !important;
+  padding: 14px 10px 16px !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 0 20px rgba(85, 230, 209, 0.18),
+    0 14px 35px rgba(6, 17, 31, 0.13) !important;
+}
+
+.info-card:hover {
+  transform: translateY(-5px) scale(1.025) !important;
+  box-shadow:
+    0 0 24px rgba(85, 230, 209, 0.46),
+    0 0 42px rgba(44, 137, 255, 0.22) !important;
+}
+
+.info-card i {
+  font-size: 30px !important;
+  margin-bottom: 8px !important;
+  filter: drop-shadow(0 0 10px rgba(50,191,178,0.45));
+}
+
+.info-card p {
+  font-size: 20px !important;
+}
+
+.info-card span {
+  font-size: 13px !important;
+  margin-top: 2px !important;
+}
+
+.info-card::after {
+  bottom: 9px !important;
+  height: 3px !important;
+  box-shadow: 0 0 12px rgba(44, 137, 255, 0.65);
+}
+
+.widget footer,
+.weather-card footer,
+.main-card footer {
+  display: none !important;
+}
+
+.page-footer {
+  width: min(920px, 94vw);
+  margin-top: 6px !important;
+  padding: 7px 12px !important;
+  border-radius: 999px;
+  text-align: center;
+  color: rgba(255,255,255,0.9) !important;
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(85,230,209,0.22);
+  font-size: 13px !important;
+  font-weight: 700;
+  box-shadow: 0 0 22px rgba(85,230,209,0.14);
+}
+
+.cloud {
+  opacity: 0.42 !important;
+  filter: blur(1px) drop-shadow(0 0 18px rgba(85,230,209,0.25)) !important;
+}
+
+.error-message {
+  margin-bottom: 6px !important;
+  padding: 7px 12px !important;
+  font-size: 13px !important;
+}
+
+@media (max-height: 780px) and (min-width: 860px) {
+  .app-shell {
+    padding-top: 7px !important;
+    gap: 6px !important;
+  }
+
+  .compact-hero h1,
+  .hero-copy h1 {
+    font-size: 32px !important;
+  }
+
+  .eyebrow {
+    display: none !important;
+  }
+
+  .search {
+    margin-bottom: 6px !important;
+  }
+
+  .widget {
+    max-height: calc(100vh - 92px) !important;
+  }
+
+  .weatherIcon {
+    min-height: 120px !important;
+    max-height: 120px !important;
+  }
+
+  .weatherIcon i {
+    font-size: 38px !important;
+  }
+
+  .weatherIcon h2 {
+    font-size: 32px !important;
+    margin-top: 5px !important;
+  }
+
+  .weatherIcon p {
+    display: none !important;
+  }
+
+  .weatherInfo,
+  .date {
+    min-height: 130px !important;
+  }
+
+  .extra-temp {
+    padding: 14px 18px !important;
+  }
+
+  .info-card {
+    min-height: 88px !important;
+    padding-top: 10px !important;
+  }
+
+  .info-card i {
+    font-size: 26px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .info-card p {
+    font-size: 18px !important;
+  }
+
+  .info-card span {
+    font-size: 12px !important;
+  }
+
+  .page-footer {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 860px) {
+  html, body, #root {
+    overflow: auto !important;
+    height: auto;
+  }
+
+  .app-shell {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+    padding: 12px 0 !important;
+  }
+
+  .widget {
+    max-height: none !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .weatherIcon,
+  .weatherInfo,
+  .date,
+  .extra-temp {
+    grid-column: 1 !important;
+  }
+
+  .weatherIcon {
+    min-height: 140px !important;
+  }
+
+  .weatherInfo,
+  .date {
+    min-height: auto !important;
+  }
+
+  .extra-temp {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
