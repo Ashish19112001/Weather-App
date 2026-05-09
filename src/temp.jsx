@@ -76,8 +76,8 @@ const Temp = () => {
       <div className="cloud cloud-three"></div>
 
       <section className="hero-copy compact-hero">
-        <p className="eyebrow">Live Weather Forecast</p>
-        <h1>Modern Weather Dashboard</h1>
+        <p className="eyebrow">Weather Forecast</p>
+        <h1>Weather Dashboard</h1>
       </section>
 
       <form className="search" onSubmit={handleSubmit}>
